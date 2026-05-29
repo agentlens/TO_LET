@@ -3,46 +3,38 @@ import streamlit as st
 # 1. Page Config
 st.set_page_config(page_title="Property Details", page_icon="🏡", layout="centered")
 
-# 2. Build the entire application using clean markdown injecting blocks
-st.markdown("""
-<style>
-    #MainMenu, footer, header {visibility: hidden;}
-    .card-container {
-        background-color: #ffffff;
-        padding: 25px;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        font-family: system-ui, -apple-system, sans-serif;
-        max-width: 400px;
-        margin: 10px auto;
-        border: 1px solid #eaeaea;
-    }
-    .card-header { color: #333333; margin: 0; font-size: 14px; font-weight: 700; }
-    .card-divider { border: 0; height: 1px; background: #e0e0e0; margin: 15px 0; }
-    .feature-item { font-size: 16px; color: #333333; margin-bottom: 12px; }
-    .video-btn {
-        display: block; width: 100%; text-align: center; background-color: #FF0000;
-        color: #ffffff !important; padding: 14px; border-radius: 8px; font-weight: bold;
-        font-size: 16px; text-decoration: none; margin: 25px 0; box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
-    }
-    .contact-box { background-color: #f9f9f9; padding: 15px; border-radius: 8px; border-left: 4px solid #007AFF; }
-</style>
+# 2. Store the entire HTML as a clean, single-line concatenation block to prevent Streamlit parsing errors
+html_string = (
+    "<style>"
+    "#MainMenu, footer, header {visibility: hidden;}"
+    ".card-container {background-color: #ffffff !important; padding: 24px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); font-family: system-ui, -apple-system, sans-serif; max-width: 360px; margin: 10px auto; border: 1px solid #e2e8f0;}"
+    "h3.card-header {color: #000000 !important; margin: 0 0 4px 0 !important; font-size: 18px !important; font-weight: 700 !important;}"
+    ".card-divider {border: 0; height: 1px; background: #e2e8f0; margin: 12px 0;}"
+    ".feature-item {font-size: 14px !important; color: #334155 !important; margin-bottom: 10px; line-height: 1.5;}"
+    ".feature-item strong {color: #0f172a !important;}"
+    ".video-btn {display: block; width: 100%; box-sizing: border-box; text-align: center; background-color: #dc2626; color: #ffffff !important; padding: 12px; border-radius: 8px; font-weight: bold; font-size: 14px; text-decoration: none; margin: 20px 0; box-shadow: 0 4px 10px rgba(220, 38, 38, 0.2);}"
+    ".contact-box {background-color: #f8fafc !important; padding: 14px; border-radius: 10px; border-left: 4px solid #2563eb; font-size: 14px !important; color: #334155 !important;}"
+    "</style>"
+    "<div class='card-container'>"
+    "<h3 class='card-header'>🏡 PROPERTY DETAILS</h3>"
+    "<div style='color: #64748b !important; font-size: 12px; font-weight: 500;'>Available for Immediate To-Let</div>"
+    "<hr class='card-divider'>"
+    "<div class='feature-list'>"
+    "<div class='feature-item'>🔹 <strong>Type:</strong> 2 BHK & Dining</div>"
+    "<div class='feature-item'>🔹 <strong>Floor:</strong> Ground</div>"
+    "<div class='feature-item'>🔹 <strong>Bathrooms:</strong> 2</div>"
+    "<div class='feature-item'>🔹 <strong>Rent:</strong> Rs.28,000 (Including water)</div>"
+    "<div class='feature-item'>🔹 <strong>Advance:</strong> Rs.1 Lakh</div>"
+    "<div class='feature-item'>🔹 <strong>Criteria:</strong> Only for Family</div>"
+    "<div class='feature-item'>🚫 <strong>Policy:</strong> NO PETS</div>"
+    "</div>"
+    "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank' class='video-btn'>📺 Watch Video Tour</a>"
+    "<div class='contact-box'>"
+    "<div style='font-weight: bold; color: #0f172a !important; margin-bottom: 4px;'>📞 CONTACT DETAILS</div>"
+    "<strong>Phone:</strong> <a href='tel:+918105340081' style='color: #2563eb !important; text-decoration: none; font-weight: bold;'>+91 8105340081</a>"
+    "</div>"
+    "</div>"
+)
 
-<div class="card-container">
-    <h3 class="card-header">🏡 PROPERTY DETAILS</h3>
-    <div style="color: #666666; font-size: 14px;">Available for Immediate To-Let</div>
-    <hr class="card-divider">
-    <div class="feature-item">🔹 <strong>Type:</strong> 2 BHK & Dining</div>
-    <div class="feature-item">🔹 <strong>Floor:</strong> Ground</div>
-    <div class="feature-item">🔹 <strong>Bathrooms:</strong> 2</div>
-    <div class="feature-item">🔹 <strong>Rent:</strong> Rs.28,000 (Including water)</div>
-    <div class="feature-item">🔹 <strong>Advance:</strong> Rs.1 Lakh</div>
-    <div class="feature-item">🔹 <strong>Criteria:</strong> Only for Family</div>
-    <div class="feature-item">🚫 <strong>Policy:</strong> NO PETS</div>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="video-btn">📺 Watch Video Tour</a>
-    <div class="contact-box">
-        <div style="font-weight: bold; color: #1a1a1a; margin-bottom: 6px;">📞 CONTACT DETAILS</div>
-        <strong>Phone:</strong> <a href="tel:+918105340081" style="color: #007AFF; text-decoration: none; font-weight: bold;">+91 8105340081</a>
-    </div>
-</div>
-""", unsafe_allow_html=True)
+# 3. Securely render the string block
+st.write(html_string, unsafe_allow_html=True)
