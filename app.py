@@ -17,7 +17,7 @@ st.markdown("""
         margin: 10px auto;
         border: 1px solid #eaeaea;
     }
-    .card-header { color: #1a1a1a; margin: 0; font-size: 14px; font-weight: 700; }
+    .card-header { color: #333333; margin: 0; font-size: 14px; font-weight: 700; }
     .card-divider { border: 0; height: 1px; background: #e0e0e0; margin: 15px 0; }
     .feature-item { font-size: 16px; color: #333333; margin-bottom: 12px; }
     .video-btn {
