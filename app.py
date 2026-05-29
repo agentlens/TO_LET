@@ -17,7 +17,7 @@ st.markdown("""
         margin: 10px auto;
         border: 1px solid #eaeaea;
     }
-    .card-header { color: #1a1a1a; margin: 0; font-size: 22px; font-weight: 700; }
+    .card-header { color: #1a1a1a; margin: 0; font-size: 14px; font-weight: 700; }
     .card-divider { border: 0; height: 1px; background: #e0e0e0; margin: 15px 0; }
     .feature-item { font-size: 16px; color: #333333; margin-bottom: 12px; }
     .video-btn {
@@ -29,10 +29,10 @@ st.markdown("""
 </style>
 
 <div class="card-container">
-    <h2 class="card-header">🏡 PROPERTY DETAILS</h2>
+    <h3 class="card-header">🏡 PROPERTY DETAILS</h3>
     <div style="color: #666666; font-size: 14px;">Available for Immediate To-Let</div>
     <hr class="card-divider">
-    <div class="feature-item">🔹 <strong>Type:</strong> 2 BHK</div>
+    <div class="feature-item">🔹 <strong>Type:</strong> 2 BHK & Dining</div>
     <div class="feature-item">🔹 <strong>Floor:</strong> Ground</div>
     <div class="feature-item">🔹 <strong>Bathrooms:</strong> 2</div>
     <div class="feature-item">🔹 <strong>Rent:</strong> Rs.28,000 (Including water)</div>
