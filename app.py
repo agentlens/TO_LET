@@ -8,15 +8,14 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# 2. Complete structural HTML and CSS layout for the Digital Card
+# 2. Main structural HTML and CSS layout for the Digital Card
+# IMPORTANT: Notice how the text below has ZERO spaces/indents on the very left edge!
 property_card_html = """
 <style>
-    /* Hide default Streamlit padding and headers for a clean standalone look */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
     
-    /* Main container styling to mimic a physical card */
     .card-container {
         background-color: #ffffff;
         padding: 30px;
@@ -28,7 +27,6 @@ property_card_html = """
         border: 1px solid #eaeaea;
     }
     
-    /* Header layout */
     .card-header {
         color: #1a1a1a;
         margin-top: 0;
@@ -44,7 +42,6 @@ property_card_html = """
         margin: 15px 0;
     }
     
-    /* Feature items configuration */
     .feature-list {
         margin: 20px 0;
     }
@@ -53,11 +50,8 @@ property_card_html = """
         font-size: 16px;
         color: #333333;
         margin-bottom: 12px;
-        display: flex;
-        align-items: center;
     }
     
-    /* High-visibility Action Button for YouTube link */
     .video-btn {
         display: block;
         width: 100%;
@@ -72,7 +66,6 @@ property_card_html = """
         text-decoration: none;
         margin: 25px 0;
         box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
-        transition: transform 0.1s ease, background-color 0.2s ease;
     }
     
     .video-btn:hover {
@@ -80,11 +73,6 @@ property_card_html = """
         text-decoration: none;
     }
     
-    .video-btn:active {
-        transform: scale(0.98);
-    }
-    
-    /* Contact detail footer box */
     .contact-box {
         background-color: #f9f9f9;
         padding: 15px;
@@ -131,5 +119,5 @@ property_card_html = """
 </div>
 """
 
-# 3. Force Streamlit to render the custom HTML card structure securely
+# 3. Securely render the pure HTML structure block
 st.markdown(property_card_html, unsafe_allow_html=True)
