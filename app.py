@@ -18,6 +18,7 @@ html_string = (
     "<div class='card-container'>"
     "<h3 class='card-header'>🏡 PROPERTY DETAILS</h3>"
     "<div style='color: #64748b !important; font-size: 12px; font-weight: 500;'>Available for Immediate To-Let</div>"
+    "<div style='color: #64748b !important; font-size: 12px; font-weight: 500;'>4th Main, AECS Layout,B-Block, Singasandra</div>"
     "<hr class='card-divider'>"
     "<div class='feature-list'>"
     "<div class='feature-item'>🔹 <strong>Type:</strong> 2 BHK & Dining</div>"
