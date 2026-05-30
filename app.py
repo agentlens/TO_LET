@@ -28,7 +28,7 @@ html_string = (
     "<div class='feature-item'>🔹 <strong>Criteria:</strong> Only for Family</div>"
     "<div class='feature-item'>🚫 <strong>Policy:</strong> NO PETS</div>"
     "</div>"
-    "<a href='https://youtube.com/shorts/CiiBMcDoIdY?feature=share' target='_blank' class='video-btn'>📺 Watch Video Tour</a>"
+    "<a href='https://youtube.com/shorts/4ygNBP2UEkY?feature=share' target='_blank' class='video-btn'>📺 Watch Video Tour</a>"
     "<div class='contact-box'>"
     "<div style='font-weight: bold; color: #0f172a !important; margin-bottom: 4px;'>📞 CONTACT DETAILS</div>"
     "<strong>Phone:</strong> <a href='tel:+918105340081' style='color: #2563eb !important; text-decoration: none; font-weight: bold;'>+91 8105340081</a>"
